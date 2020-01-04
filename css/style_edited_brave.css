@@ -9,26 +9,38 @@ body{
 .wrapper{
     display: grid;
     height: 100%;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 0.2fr; 
 }
     
     .wrapper .header{
         display: inline;
-        
-        grid-column: 1 / 1;
+        grid-column: 3 / 4;
         grid-row: 1;
-        text-align: end;
+        text-align: right;
+        padding-top: 5px;
     }
+            .wrapper .header a {
+                text-decoration: none;
+                color: black;
+                margin-right: 1em;
+            }
+            .wrapper .header a:hover{
+                text-decoration: underline;
+            }
 
     .wrapper .main{
-    margin-top: 200px;
+    grid-column: 2 / 3;
+    grid-row: 2;
     text-align: center;
     }
 
    
     .wrapper .search{
+        grid-column: 2 / 3;
+        grid-row: 3;
         text-align: center;
-        margin-top: 30px;
+        margin-top: 0;
     
     }
     
@@ -70,36 +82,100 @@ body{
                     color: #222;
                 }
 
-
+/* -------------testing footer ------------ 
     .wrapper .footer{
-        display: flex;
-        margin-top: 250px;
+        display: inline;
+        grid-column: 1 / 4;
+        grid-row: 4 / 4;
+        text-align:end;        
+        padding: 0px;
+        margin: 0px;
         background-color: #ebe7e7;
-        flex-shrink: 0;
+        height:40px;
         }
     
         .wrapper .footer .country-footer-1{
             text-align: start;
             color: #757575;
             margin-bottom: 0em;
+            margin-top: 0em
         }
         
         .wrapper .footer .footer-down{
-            display: inline-block;
+            display: inline;
             color: #757575;
             text-decoration: none;
+            margin-bottom: 0em;
+            justify-content:end;
+            grid-column:auto;
+            
             }
             
             .wrapper .footer .footer-down .footer-right{
+                grid-column: 3;
                 float: right;
                 text-align: end;
                 text-decoration: none;
+                margin-bottom: 0em
             }
 
             .wrapper .footer .footer-down .footer-left{
+                grid-column: 1;
                 float:left;
-                margin-right: 300px;
+                margin-bottom: 0em;
             }
 
+------------testing footer END ------------- */
+
+.footer{
+    display: grid;
+    grid-column: 1/4;
+    grid-row: 5/5;
+    width: 100%;
+    margin-top: 88px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    top: 0;
+    bottom: 6px;
+    background-color: #e4e3e3;
+
+}
+  
 
 
+    .country-footer-1{
+        text-align: start;
+        color: #757575;
+        padding: 10px;
+        margin-bottom: 9px;
+        margin-left: 15px;
+        border-bottom: 1px dotted black;
+        margin-right: 15px;
+    }
+
+
+    .footer-down{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        color: #757575;
+        justify-content:end;
+        margin-left: 15px;
+        }
+            .footer-down a{
+                color: #757575;
+                text-decoration: none;
+                margin-right: 2em;
+            }
+            .footer-down a:hover{
+                text-decoration: underline;
+            }
+    
+    .footer-right{
+        float: right;
+        text-align: end;
+    }
+
+    .footer-left{
+        float: left;
+        text-align: start;
+    }
