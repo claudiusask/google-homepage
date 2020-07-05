@@ -10,7 +10,7 @@ body{
     display: grid;
     height: 100%;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr 0.2fr; 
+    grid-template-rows: 1fr 1fr 1fr 1fr 0.41fr; 
 }
     
     .wrapper .header{
@@ -127,55 +127,59 @@ body{
 
 ------------testing footer END ------------- */
 
-.footer{
-    display: grid;
-    grid-column: 1/4;
-    grid-row: 5/5;
-    width: 100%;
-    margin-top: 88px;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
-    top: 0;
-    bottom: 6px;
-    background-color: #e4e3e3;
-
-}
-  
-
-
-    .country-footer-1{
-        text-align: start;
-        color: #757575;
-        padding: 10px;
-        margin-bottom: 9px;
-        margin-left: 15px;
-        border-bottom: 1px dotted black;
-        margin-right: 15px;
-    }
-
-
-    .footer-down{
+    .footer{
+        display: grid;
+        /* grid-column: 1/4;
+         grid-row: 5/5; */
+        width: 100%; /*
+        margin-top: 0px;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 14px;
-        color: #757575;
-        justify-content:end;
-        margin-left: 15px;
-        }
-            .footer-down a{
-                color: #757575;
-                text-decoration: none;
-                margin-right: 2em;
-            }
-            .footer-down a:hover{
-                text-decoration: underline;
-            }
-    
-    .footer-right{
-        float: right;
-        text-align: end;
-    }
+        /* top: 0;
+        bottom: 6px; 
+        height: 100%; */
+        flex-shrink: 0;
+        /* position: absolute; */ 
+        margin-bottom: 0px;
+        background-color: #e4e3e3;
 
-    .footer-left{
-        float: left;
-        text-align: start;
     }
+    
+
+
+        .country-footer-1{
+            text-align: start;
+            color: #757575;
+            padding: 10px;
+            margin-bottom: 9px;
+            margin-left: 15px;
+            border-bottom: 1px dotted black;
+            margin-right: 15px;
+        }
+
+
+        .footer-down{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            color: #757575;
+            justify-content:end;
+            margin-left: 15px;
+            }
+                .footer-down a{
+                    color: #757575;
+                    text-decoration: none;
+                    margin-right: 2em;
+                }
+                .footer-down a:hover{
+                    text-decoration: underline;
+                }
+        
+        .footer-right{
+            float: right;
+            text-align: end;
+        }
+
+        .footer-left{
+            float: left;
+            text-align: start;
+        }
